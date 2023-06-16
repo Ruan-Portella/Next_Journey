@@ -1,6 +1,6 @@
 # Next_Journey
 
-Atividades desenvolvidas por [mim](https://www.linkedin.com/in/ruan-portella-734246108/) durante minha tragetória na [Udemy](https://www.udemy.com/course/nextjs-e-react/) :mortar_board:
+Atividades desenvolvidas por [mim](https://www.linkedin.com/in/ruan-portella-734246108/) durante minha trajetória na [Udemy](https://www.udemy.com/course/nextjs-e-react/) :mortar_board:
 
 >Esse repositório é um espaço pessoal dedicado à minha jornada de aprendizagem em Next.js. Aqui, mantenho uma coleção organizada de recursos, exemplos de código e projetos relacionados ao Next.js, com o objetivo de aprofundar meu conhecimento nesse framework de React.js. Neste repositório, você encontrará anotações detalhadas, tutoriais personalizados e experimentos de código que refletem minha exploração contínua do Next.js. Desde os conceitos básicos até tópicos mais avançados, registro minhas descobertas e insights para acompanhar meu progresso e revisitar sempre que necessário.
 
