@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import Porta from "../components/Porta";
-import Present from "../components/Presente";
 import PortaModel from "../model/porta";
 import { atualizarPortas, criarPortar } from "../functions/portas";
 
