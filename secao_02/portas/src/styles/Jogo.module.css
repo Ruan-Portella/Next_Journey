@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .portas {
@@ -25,4 +24,10 @@
     font-size: 1.5rem;
     border: none;
     padding: 10px 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .jogo {
+        margin: 0;
+    }
 }
