@@ -8,3 +8,14 @@ export function criarPortar(quantidade: number, selecionada: number): any {
         return new PortaModel(numero, temPresente);
     })
 }
+
+export function atualizarPortas(portas: PortaModel[], modificada: PortaModel): PortaModel[] {
+    return portas.map(portaAtual => {
+        const igualAModificada = portaAtual.numero === modificada.numero
+        if (igualAModificada) {
+            return modificada
+        } else {
+            return  modificada.aberta ? portaAtual : portaAtual.desselecionar()
+        }
+    })
+}
