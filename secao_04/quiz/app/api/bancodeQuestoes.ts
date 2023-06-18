@@ -7,13 +7,13 @@ const questoes: QuestaoModel[] = [
         RespostaModel.errada('Barata'),
         RespostaModel.errada('Pulga'),
         RespostaModel.certa('Barbeiro'),
-    ], false),
+    ]),
     new QuestaoModel(202, 'Qual fruto é conhecido no Norte e Nordeste como "jerimum"?', [
         RespostaModel.errada('Caju'),
         RespostaModel.errada('Côco'),
         RespostaModel.errada('Chuchu'),
         RespostaModel.certa('Abóbora'),
-    ], false),
+    ]),
 ]
 
 export default questoes
