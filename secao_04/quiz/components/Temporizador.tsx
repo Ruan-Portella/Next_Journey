@@ -14,7 +14,7 @@ export default function Temporizador(props: TemporizadorProps) {
                 size={120}
                 isPlaying
                 onComplete={props.tempoEsgotado}
-                colors={['#BCE596', '#F7B801', '#A30000']}
+                colors={['#6fe105', '#F7B801', '#A30000']}
                 colorsTime={[10, 5, 0]}
             >
                 {({ remainingTime }) => remainingTime}
