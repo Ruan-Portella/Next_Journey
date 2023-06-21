@@ -16,6 +16,7 @@ const BASE_URL = 'http://localhost:3000/api'
 export default function Home() {
   const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([]);
   const [questao, setQuestao] = useState<QuestaoModel>(questaoMock)
+  const [respostasCertas, setrespostasCertas] = useState<number>(0)
 
   async function carregarIdsQuestoes() {
     const resp = await fetch(`${BASE_URL}/questionario`);
@@ -38,8 +39,10 @@ export default function Home() {
     idsDasQuestoes.length > 0 && carregarQuestao(idsDasQuestoes[0])
   }, [idsDasQuestoes])
 
-  function questaoRespondida(questao: QuestaoModel) {
-
+  function questaoRespondida(questaoRespondida: QuestaoModel) {
+    setQuestao(questaoRespondida);
+    const certa = questaoRespondida.acertou
+    setrespostasCertas(respostasCertas + (certa ? 1 : 0));
   }
 
   function irParaProx() {
