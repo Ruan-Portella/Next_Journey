@@ -1,21 +1,16 @@
 'use client'
 import Questionario from '@/components/Questionario'
 import QuestaoModel from '@/model/questao'
-import RespostaModel from '@/model/resposta'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-
-const questaoMock = new QuestaoModel(1, 'Melhor cor?', [ 
-  RespostaModel.errada('Verde'), 
-  RespostaModel.errada('Vermelha'),
-  RespostaModel.errada('Azul'),
-  RespostaModel.certa('Preta'),
-])
 
 const BASE_URL = 'http://localhost:3000/api'
 
 export default function Home() {
+  const router = useRouter()
+  const searchParams = useSearchParams()!
   const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([]);
-  const [questao, setQuestao] = useState<QuestaoModel>(questaoMock)
+  const [questao, setQuestao] = useState<QuestaoModel>()
   const [respostasCertas, setrespostasCertas] = useState<number>(0)
 
   async function carregarIdsQuestoes() {
@@ -46,8 +41,10 @@ export default function Home() {
   }
 
   function idProx() {
+    if (questao) {
     const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1
     return idsDasQuestoes[proximoIndice];
+    }
   }
 
   function irParaProx() {
@@ -60,7 +57,7 @@ export default function Home() {
   }
 
   function finalizar() {
-    
+    router.push('/resultado' + '?' + 'total=' + `${ idsDasQuestoes.length }` + '&' + 'certas=' + `${respostasCertas}`)
   }
 
   return (
