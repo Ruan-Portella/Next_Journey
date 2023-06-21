@@ -18,6 +18,10 @@ export default class RespostaModel {
         
     }
 
+    static criarUsandoObjeto(obj: RespostaModel): RespostaModel {
+        return new RespostaModel(obj.valor, obj.certa, obj.revelada)
+    } 
+
     get valor() {
         return this.#valor
     }
