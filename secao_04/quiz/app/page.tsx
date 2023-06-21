@@ -45,15 +45,29 @@ export default function Home() {
     setrespostasCertas(respostasCertas + (certa ? 1 : 0));
   }
 
-  function irParaProx() {
+  function idProx() {
+    const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1
+    return idsDasQuestoes[proximoIndice];
+  }
 
+  function irParaProx() {
+    const proximoId = idProx();
+    proximoId ? irParaProxQuestao(proximoId) : finalizar();
+  }
+
+  function irParaProxQuestao(proximoId: number) {
+    carregarQuestao(proximoId)
+  }
+
+  function finalizar() {
+    
   }
 
   return (
     <div>
       <Questionario 
         questao={questao}
-        ultima={true}
+        ultima={idProx() === undefined}
         questaoRespondida={questaoRespondida}
         irParaProx={irParaProx}
       />
