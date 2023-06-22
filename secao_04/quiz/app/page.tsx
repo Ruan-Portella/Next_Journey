@@ -62,12 +62,17 @@ export default function Home() {
 
   return (
     <div>
-      <Questionario 
-        questao={questao}
-        ultima={idProx() === undefined}
-        questaoRespondida={questaoRespondida}
-        irParaProx={irParaProx}
-      />
+      {
+        questao ? (
+          <Questionario 
+          questao={questao}
+          ultima={idProx() === undefined}
+          questaoRespondida={questaoRespondida}
+          irParaProx={irParaProx}
+        />
+        ) : false
+      }
+
     </div>
   )
 }
