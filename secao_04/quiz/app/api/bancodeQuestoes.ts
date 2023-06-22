@@ -2,29 +2,29 @@ import QuestaoModel from "@/model/questao";
 import RespostaModel from "@/model/resposta";
 
 const questoes: QuestaoModel[] = [
-    new QuestaoModel(306, 'Qual bicho transmite a Doença de Chagas?', [
-        RespostaModel.errada('Abelha'),
-        RespostaModel.errada('Barata'),
-        RespostaModel.errada('Pulga'),
-        RespostaModel.certa('Barbeiro'),
+new QuestaoModel(306, 'Qual é o nome do Criador desse Quiz?', [
+        RespostaModel.errada('Naur'),
+        RespostaModel.errada('Portella'),
+        RespostaModel.errada('Adenilson'),
+        RespostaModel.certa('Ruan'),
     ]),
-    new QuestaoModel(202, 'Qual fruto é conhecido no Norte e Nordeste como "jerimum"?', [
-        RespostaModel.errada('Caju'),
-        RespostaModel.errada('Côco'),
-        RespostaModel.errada('Chuchu'),
-        RespostaModel.certa('Abóbora'),
+    new QuestaoModel(202, 'Qual é a idade do Criador desse Quiz?', [
+        RespostaModel.errada('1'),
+        RespostaModel.errada('10'),
+        RespostaModel.errada('20'),
+        RespostaModel.certa('18'),
     ]),
-    new QuestaoModel(203, 'Qual é o coletivo de cães?', [
-        RespostaModel.errada('Manada'),
-        RespostaModel.errada('Alcateia'),
-        RespostaModel.errada('Rebanho'),
-        RespostaModel.certa('Matilha'),
+    new QuestaoModel(203, 'Qual é a Stack do Criador desse Quiz?', [
+        RespostaModel.errada('Front End'),
+        RespostaModel.errada('Programador'),
+        RespostaModel.errada('Back End'),
+        RespostaModel.certa('Full Stack'),
     ]),
-    new QuestaoModel(204, 'Qual é o triângulo que tem todos os lados diferentes?', [
-        RespostaModel.errada('Equilátero'),
-        RespostaModel.errada('Isóceles'),
-        RespostaModel.errada('Trapézio'),
-        RespostaModel.certa('Escaleno'),
+    new QuestaoModel(204, 'Qual é o site do Criador desse Quiz?', [
+        RespostaModel.errada('portella.dev'),
+        RespostaModel.errada('morales.dev'),
+        RespostaModel.errada('adenilson.dev'),
+        RespostaModel.certa('ruanportella.dev'),
     ]),
 ]
 
