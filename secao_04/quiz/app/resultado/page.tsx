@@ -1,6 +1,8 @@
 'use client' 
+import Estatistica from '@/components/Estatistica'
 import styles from '../../style/Resultado.module.css'
 import { useSearchParams } from 'next/navigation'
+import Botao from '@/components/Botao'
 
 export default function resultado() {
     const searchParams = useSearchParams()
@@ -11,10 +13,13 @@ export default function resultado() {
 
     return (
         <div className={styles.resultado}>
-            <h1>Resultado</h1>
-            <div>{total}</div>
-            <div>{certas}</div>
-            <div>{`${percentual}%`}</div>
+            <h1>Resultado Final</h1>
+            <div style={{ display: 'flex' }}>
+            <Estatistica valor={total} texto='Perguntas'/>
+            <Estatistica valor={certas} texto='Certas' corFundo='#9CD2A4'/>
+            <Estatistica valor={`${percentual}%`} texto='Percentual' corFundo='#DE6A33'/>
+            </div>
+            <Botao href='/' texto='Tentar Novamente'/>
         </div>
     )
 }
